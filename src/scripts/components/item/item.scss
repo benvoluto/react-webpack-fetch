@@ -1,0 +1,17 @@
+.item-list {
+  .item {
+    font-size: 1.34em;
+    color: DimGrey;
+    white-space: nowrap;
+
+    .item-text {
+      display: inline-block;
+      padding: 1em;
+    }
+
+    .item-meta {
+      font-style: italic;
+      color: LightGray;
+    }
+  }
+}
