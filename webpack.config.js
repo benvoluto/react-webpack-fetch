@@ -25,7 +25,7 @@ var config = {
       loaders: ['react-hot', 'babel?presets[]=es2015&presets[]=react', 'eslint'],
       exclude: /node_modules/
     }, {
-      test: /\.scss$/,
+      test: /\.scss$|\.sass$/,
       loader: 'style!css!postcss!sass'
     }, {
       test: /\.woff$|\.ttf$|\.wav$|\.mp3$/,
