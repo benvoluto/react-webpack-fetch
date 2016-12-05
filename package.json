@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "some boilerplate for react and webpack, with fetch",
   "main": "assets/js/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benvoluto/react-webpack-fetch.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.5.1",
     "babel-core": "^6.7.6",
