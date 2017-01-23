@@ -1,1 +1,5 @@
 node_modules/**/*.js
+public
+webpack.config.js
+webpack.production.config.js
+webpack.loaders.js
