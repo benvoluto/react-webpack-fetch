@@ -30,7 +30,8 @@ module.exports = {
 	output: {
 		publicPath: '',
 		path: path.join(__dirname, 'dist'),
-		filename: '[chunkhash].js'
+		// filename: '[chunkhash].js'
+		filename: 'bundle.js'
 	},
 	resolve: {
 		extensions: ['', '.js', '.jsx']
@@ -42,7 +43,7 @@ module.exports = {
 		new WebpackCleanupPlugin(),
 		new webpack.DefinePlugin({
 			'process.env': {
-				NODE_ENV: '"production"'
+				NODE_ENV: JSON.stringify("production")
 			}
 		}),
 		new webpack.optimize.UglifyJsPlugin({
@@ -54,12 +55,13 @@ module.exports = {
 			}
 		}),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new ExtractTextPlugin('[contenthash].css', {
+		// new ExtractTextPlugin('[contenthash].css', {
+	  new ExtractTextPlugin('style.css', {
 			allChunks: true
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
-			title: 'Webpack App'
+			title: 'Starter'
 		}),
 		new webpack.optimize.DedupePlugin()
 	]
